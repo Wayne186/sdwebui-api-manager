@@ -1,4 +1,7 @@
-## AAM - AnyLoRA Anime Mix - Anime Screencap Style Model
+
+## Checkpoints
+
+# AAM - AnyLoRA Anime Mix - Anime Screencap Style Model
 suggested settings:
 
 Set the ETA Noise Seed Delta (ENSD) to 31337
@@ -14,3 +17,32 @@ Use AnimeVideo or Foolhardy as upscalers. If you know what to do, Latent makes a
 (optional to reproduce some results) Set "Do not make DPM++ SDE deterministic across different batch sizes." Only my old images use that.
 (this setting is not actually good, so I'm gonna disable it, but might be the reason some results are different)
 
+
+## LORAs
+
+# Deep throat
+LoRA trained to generate deepthroat from pov with and without hands on the head. It was not trained in any other position.
+
+Trigger: deepthroat
+
+Other useful tags: pov hands, head grab, grabbing another's head, penis, fellatio.
+
+# Downblouse
+Trained on Downblouse images, leaning forward.
+
+Additional Prompts keywords - nip slip, extended_downblouse, all fours, t-shirt, leaning forward, visible nipple, NSFW
+
+# Female Masturbation
+How to use. Trigger: female masturbation
+
+To increase the effect in certain models you can also add one of these tags: covering crotch, crotch, fingering, masturbation.
+
+# Breast lift
+weights 0.6 - 1.0
+
+recommended tags: Breast_lift <-- (seems to help a lot )
+
+# Bukkake / excessive cum
+Simple LoRA trained to generate bukkake / excessive cum.
+
+Use any cum-related tags to trigger the effect. Recommended tags to use: cum, bukkake, excessive cum, facial, cum on body, cum on breasts, liquid, suggestive fluid, cumdrip, cum string, cum everywhere, cumshot, cum pool etc.

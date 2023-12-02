@@ -1,13 +1,20 @@
+# apt is a command-line utility used for installing, updating, removing, and also managing deb packages on Ubuntu, Debian, and related Linux distributions. 
+# apt is designed for interactive use.
 apt update
 apt install -y aria2
 apt-get install python3-pip
 apt install vim
 apt-get install tmux
 
+# pip or pip3 is a command line tool for installing Python 3 modules.
+# install requirements.txt, which contains all the dependencies required for the project.
 pip3 install -r requirements.txt
 
+# git clone sd-webui
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
-git reset --hard 394ffa7
+# git reset --hard 394ffa7
+
+# essential sd-webui plugins
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d ./stable-diffusion-webui/models/ESRGAN -o 4x-UltraSharp.pth
 wget https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py -O ./stable-diffusion-webui/scripts/run_n_times.py
 git clone https://github.com/camenduru/stable-diffusion-webui-images-browser ./stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
@@ -22,6 +29,8 @@ git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot ./st
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper ./stable-diffusion-webui/extensions/sd-webui-aspect-ratio-helper
 git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor ./stable-diffusion-webui/extensions/sd-webui-3d-open-pose-editor
 git clone https://github.com/continue-revolution/sd-webui-segment-anything.git ./stable-diffusion-webui/extensions/sd-webui-segment-anything
+
+# additional sd-webui plugins
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_ip2p_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_shuffle_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_canny_fp16.safetensors
@@ -63,12 +72,20 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_sketch_sd15v2.pth -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o t2iadapter_sketch_sd15v2.pth
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_zoedepth_sd15v1.pth -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o t2iadapter_zoedepth_sd15v1.pth
 
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.ckpt
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.vae.pt
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/xiaozaa/animaTest/resolve/main/animeoutlineV4_16.safetensors -d ./stable-diffusion-webui/models/Lora -o animeoutlineV4_16.safetensors
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors -d ./stable-diffusion-webui/models/Stable-diffusion -o Realistic_Vision_V4.0.safetensors
+# basic sd-webui models
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.ckpt
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.vae.pt
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/xiaozaa/animaTest/resolve/main/animeoutlineV4_16.safetensors -d ./stable-diffusion-webui/models/Lora -o animeoutlineV4_16.safetensors
 
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Sasulee/animeLineartMangaLike_v30MangaLike/resolve/main/animeLineartMangaLike_v30MangaLike.safetensors -d ./stable-diffusion-webui/models/Lora -o animeLineartMangaLike_v30MangaLike.safetensors
+# AAM - AnyLoRA Anime Mix - Anime Screencap Style Model https://civitai.com/models/84586/aam-anylora-anime-mix-anime-screencap-style-model
+# 自带动画大色块模型
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/89927?type=Model&format=SafeTensor&size=full&fp=fp16 -d ./stable-diffusion-webui/models/Stable-diffusion -o aamAnyloraAnimeMixAnime_v1.safetensors
+
+# AnyLoRA - Checkpoint https://civitai.com/models/23900/anylora-checkpoint
+# 中性动画模型
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/95489?type=Model&format=SafeTensor&size=full&fp=fp16  -d ./stable-diffusion-webui/models/Stable-diffusion -o anyloraCheckpoint_bakedvaeBlessedFp16.safetensors
+
+# sd-webui embeding models
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/Nerfgun3/bad_prompt/resolve/main/bad_prompt_version2.pt -d ./stable-diffusion-webui/embeddings -o bad_prompt_version2.pt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/gsdf/EasyNegative/resolve/main/EasyNegative.pt -d ./stable-diffusion-webui/embeddings -o EasyNegative.pt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/nick-x-hacker/bad-artist/resolve/main/bad-artist.pt -d ./stable-diffusion-webui/embeddings -o bad-artist.pt
@@ -77,8 +94,22 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/emb
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/EasyNegativeV2.safetensors -d ./stable-diffusion-webui/embeddings -o EasyNegativeV2.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/verybadimagenegative_v1.3.pt -d ./stable-diffusion-webui/embeddings -o verybadimagenegative_v1.3.pt
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/bad-image-v2-39000.pt -d ./stable-diffusion-webui/embeddings -o bad-image-v2-39000.pt
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/90072?type=Model&format=SafeTensor&size=pruned&fp=fp16  -d ./stable-diffusion-webui/models/Stable-diffusion -o photon_v1.safetensors
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -d ./stable-diffusion-webui/models/sam -o sam_vit_h_4b8939.pth
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -d ./stable-diffusion-webui/models/sam -o sam_vit_h_4b8939.pth
+
+# LORAs
+# 线稿
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Sasulee/animeLineartMangaLike_v30MangaLike/resolve/main/animeLineartMangaLike_v30MangaLike.safetensors -d ./stable-diffusion-webui/models/Lora -o animeLineartMangaLike_v30MangaLike.safetensors
+
+# 动画画风 Use at weight 1 on AnyLoRA
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/60568?type=Model&format=SafeTensor -d ./stable-diffusion-webui/models/Lora -o animemix_v3_offset.safetensors
+
+# ---------------------------------- HENTAI LORAs ---------------------------------- #
+
+# deep throat https://civitai.com/models/94912/deepthroat-pov
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/101249?type=Model&format=SafeTensor -d ./stable-diffusion-webui/models/Lora -o pov_deepthroat_v0.1.safetensors
+
+# Downblouse https://civitai.com/models/10061/downblouse-for-boobs
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/11964?type=Model&format=SafeTensor&size=full&fp=fp16 -d ./stable-diffusion-webui/models/Lora -o downblouse-v1.safetensors
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py

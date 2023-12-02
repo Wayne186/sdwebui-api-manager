@@ -79,11 +79,11 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 
 # AAM - AnyLoRA Anime Mix - Anime Screencap Style Model https://civitai.com/models/84586/aam-anylora-anime-mix-anime-screencap-style-model
 # 自带动画大色块模型
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/89927?type=Model&format=SafeTensor&size=full&fp=fp16 -d ./stable-diffusion-webui/models/Stable-diffusion -o aamAnyloraAnimeMixAnime_v1.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Lykon/AnyLoRA/resolve/main/AAM_Anylora_AnimeMix.safetensors -d ./stable-diffusion-webui/models/Stable-diffusion -o AAM_Anylora_AnimeMix.safetensors
 
 # AnyLoRA - Checkpoint https://civitai.com/models/23900/anylora-checkpoint
 # 中性动画模型
-# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/95489?type=Model&format=SafeTensor&size=full&fp=fp16  -d ./stable-diffusion-webui/models/Stable-diffusion -o anyloraCheckpoint_bakedvaeBlessedFp16.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Lykon/AnyLoRA/resolve/main/AnyLoRA_bakedVae_fp16_NOTpruned.safetensors  -d ./stable-diffusion-webui/models/Stable-diffusion -o AnyLoRA_bakedVae_fp16_NOTpruned.safetensors
 
 # sd-webui embeding models
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/Nerfgun3/bad_prompt/resolve/main/bad_prompt_version2.pt -d ./stable-diffusion-webui/embeddings -o bad_prompt_version2.pt
@@ -106,10 +106,19 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/emb
 # ---------------------------------- HENTAI LORAs ---------------------------------- #
 
 # deep throat https://civitai.com/models/94912/deepthroat-pov
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/101249?type=Model&format=SafeTensor -d ./stable-diffusion-webui/models/Lora -o pov_deepthroat_v0.1.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/101249?type=Model -d ./stable-diffusion-webui/models/Lora -o pov_deepthroat_v0.1.safetensors
 
 # Downblouse https://civitai.com/models/10061/downblouse-for-boobs
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/11964?type=Model&format=SafeTensor&size=full&fp=fp16 -d ./stable-diffusion-webui/models/Lora -o downblouse-v1.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/11964?type=Model -d ./stable-diffusion-webui/models/Lora -o downblouse-v1.safetensors
+
+# 自卫 https://civitai.com/models/155172/female-masturbation
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/174016?type=Model -d ./stable-diffusion-webui/models/Lora -o female_masturbation_v0.5.safetensors
+
+#Breast lift https://civitai.com/models/107878/breast-lift
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/116069?type=Model -d ./stable-diffusion-webui/models/Lora -o BreastLiftV8-000080.safetensors
+
+#Bukkake / excessive cum https://civitai.com/models/109745/bukkake-excessive-cum
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/118273?type=Model -d ./stable-diffusion-webui/models/Lora -o bukkake_v0.4.safetensors
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py

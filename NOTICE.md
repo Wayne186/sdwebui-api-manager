@@ -46,3 +46,7 @@ recommended tags: Breast_lift <-- (seems to help a lot )
 Simple LoRA trained to generate bukkake / excessive cum.
 
 Use any cum-related tags to trigger the effect. Recommended tags to use: cum, bukkake, excessive cum, facial, cum on body, cum on breasts, liquid, suggestive fluid, cumdrip, cum string, cum everywhere, cumshot, cum pool etc.
+
+# Spread pussy
+v1.1 Added image clitoris while standing
+To spread more pussy just use tag : cervix

@@ -114,11 +114,14 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 # 自卫 https://civitai.com/models/155172/female-masturbation
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/174016?type=Model -d ./stable-diffusion-webui/models/Lora -o female_masturbation_v0.5.safetensors
 
-#Breast lift https://civitai.com/models/107878/breast-lift
+# Breast lift https://civitai.com/models/107878/breast-lift
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/116069?type=Model -d ./stable-diffusion-webui/models/Lora -o BreastLiftV8-000080.safetensors
 
-#Bukkake / excessive cum https://civitai.com/models/109745/bukkake-excessive-cum
+# Bukkake / excessive cum https://civitai.com/models/109745/bukkake-excessive-cum
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/118273?type=Model -d ./stable-diffusion-webui/models/Lora -o bukkake_v0.4.safetensors
+
+# Spread pussy https://civitai.com/models/11363/spread-pussy
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/25584?type=Model  -d ./stable-diffusion-webui/models/Lora -o cervix.safetensors
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py

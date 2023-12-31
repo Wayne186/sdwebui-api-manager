@@ -27,8 +27,20 @@ git clone https://github.com/camenduru/stable-diffusion-webui-catppuccin ./stabl
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg ./stable-diffusion-webui/extensions/stable-diffusion-webui-rembg
 git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot ./stable-diffusion-webui/extensions/stable-diffusion-webui-two-shot
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper ./stable-diffusion-webui/extensions/sd-webui-aspect-ratio-helper
-git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor ./stable-diffusion-webui/extensions/sd-webui-3d-open-pose-editor
+# git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor ./stable-diffusion-webui/extensions/sd-webui-3d-open-pose-editor
 git clone https://github.com/continue-revolution/sd-webui-segment-anything.git ./stable-diffusion-webui/extensions/sd-webui-segment-anything
+
+# additional sd-webui plugins
+git clone https://github.com/richrobber2/canvas-zoom.git ./stable-diffusion-webui/extensions/canvas-zoom
+git clone https://github.com/fkunn1326/openpose-editor.git ./stable-diffusion-webui/extensions/openpose-editor
+
+git clone https://github.com/toriato/stable-diffusion-webui-wd14-tagger.git ./stable-diffusion-webui/extensions/stable-diffusion-webui-wd14-tagger
+git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git ./stable-diffusion-webui/extensions/a1111-sd-webui-tagcomplete
+
+git clone https://github.com/Physton/sd-webui-prompt-all-in-one.git ./stable-diffusion-webui/extensions/sd-webui-prompt-all-in-one
+git clone https://github.com/hanamizuki-ai/stable-diffusion-webui-localization-zh_Hans.git ./stable-diffusion-webui/extensions/stable-diffusion-webui-localization-zh_Hans
+git clone https://github.com/AIrjen/OneButtonPrompt.git ./stable-diffusion-webui/extensions/OneButtonPrompt
+
 
 # additional sd-webui plugins
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_ip2p_fp16.safetensors
@@ -122,6 +134,8 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 
 # Spread pussy https://civitai.com/models/11363/spread-pussy
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/25584?type=Model  -d ./stable-diffusion-webui/models/Lora -o cervix.safetensors
+
+
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py

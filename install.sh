@@ -14,11 +14,13 @@ pip3 install -r requirements.txt
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 # git reset --hard 394ffa7
 
+# ---------------------------------------------- 分割线 ---------------------------------------------- #
+
 # essential sd-webui plugins
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d ./stable-diffusion-webui/models/ESRGAN -o 4x-UltraSharp.pth
 wget https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py -O ./stable-diffusion-webui/scripts/run_n_times.py
 git clone https://github.com/camenduru/stable-diffusion-webui-images-browser ./stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
-git clone https://github.com/camenduru/sd-civitai-browser ./stable-diffusion-webui/extensions/sd-civitai-browser
+#git clone https://github.com/camenduru/sd-civitai-browser ./stable-diffusion-webui/extensions/sd-civitai-browser
 git clone https://github.com/kohya-ss/sd-webui-additional-networks ./stable-diffusion-webui/extensions/sd-webui-additional-networks
 git clone https://github.com/Mikubill/sd-webui-controlnet ./stable-diffusion-webui/extensions/sd-webui-controlnet
 git clone https://github.com/camenduru/sd-webui-tunnels ./stable-diffusion-webui/extensions/sd-webui-tunnels
@@ -36,13 +38,13 @@ git clone https://github.com/fkunn1326/openpose-editor.git ./stable-diffusion-we
 
 git clone https://github.com/toriato/stable-diffusion-webui-wd14-tagger.git ./stable-diffusion-webui/extensions/stable-diffusion-webui-wd14-tagger
 git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git ./stable-diffusion-webui/extensions/a1111-sd-webui-tagcomplete
-
 git clone https://github.com/Physton/sd-webui-prompt-all-in-one.git ./stable-diffusion-webui/extensions/sd-webui-prompt-all-in-one
 git clone https://github.com/hanamizuki-ai/stable-diffusion-webui-localization-zh_Hans.git ./stable-diffusion-webui/extensions/stable-diffusion-webui-localization-zh_Hans
 git clone https://github.com/AIrjen/OneButtonPrompt.git ./stable-diffusion-webui/extensions/OneButtonPrompt
+git clone https://github.com/zanllp/sd-webui-infinite-image-browsing.git ./stable-diffusion-webui/extensions/sd-webui-infinite-image-browsing
+git clone https://github.com/hako-mikan/sd-webui-regional-prompter.git ./stable-diffusion-webui/extensions/sd-webui-regional-prompter
 
-
-# additional sd-webui plugins
+# control net related
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_ip2p_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_shuffle_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny_fp16.safetensors -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11p_sd15_canny_fp16.safetensors
@@ -84,6 +86,8 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_sketch_sd15v2.pth -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o t2iadapter_sketch_sd15v2.pth
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_zoedepth_sd15v1.pth -d ./stable-diffusion-webui/extensions/sd-webui-controlnet/models -o t2iadapter_zoedepth_sd15v1.pth
 
+# ---------------------------------------------- 分割线 ---------------------------------------------- #
+
 # basic sd-webui models
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.ckpt
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d ./stable-diffusion-webui/models/Stable-diffusion -o Anything-V3.0-pruned.vae.pt
@@ -108,6 +112,8 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/emb
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/negative/resolve/main/bad-image-v2-39000.pt -d ./stable-diffusion-webui/embeddings -o bad-image-v2-39000.pt
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -d ./stable-diffusion-webui/models/sam -o sam_vit_h_4b8939.pth
 
+# ---------------------------------------------- 分割线 ---------------------------------------------- #
+
 # LORAs
 # 线稿
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Sasulee/animeLineartMangaLike_v30MangaLike/resolve/main/animeLineartMangaLike_v30MangaLike.safetensors -d ./stable-diffusion-webui/models/Lora -o animeLineartMangaLike_v30MangaLike.safetensors
@@ -115,7 +121,10 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/emb
 # 动画画风 Use at weight 1 on AnyLoRA
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/60568?type=Model&format=SafeTensor -d ./stable-diffusion-webui/models/Lora -o animemix_v3_offset.safetensors
 
-# ---------------------------------- HENTAI LORAs ---------------------------------- #
+#无职转生风格化
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/67458?type=Model -d ./stable-diffusion-webui/models/Lora -o mushoku_tense_style_offset.safetensors
+
+# ---------------------------------- HENTAI LORAs!!!! ---------------------------------- #
 
 # deep throat https://civitai.com/models/94912/deepthroat-pov
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/101249?type=Model -d ./stable-diffusion-webui/models/Lora -o pov_deepthroat_v0.1.safetensors

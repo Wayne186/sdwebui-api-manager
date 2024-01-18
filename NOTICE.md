@@ -17,8 +17,24 @@ Use AnimeVideo or Foolhardy as upscalers. If you know what to do, Latent makes a
 (optional to reproduce some results) Set "Do not make DPM++ SDE deterministic across different batch sizes." Only my old images use that.
 (this setting is not actually good, so I'm gonna disable it, but might be the reason some results are different)
 
+# AnyLoRA 
+
+Just make sure you use CLIP skip 2 and booru style tags when training.
+
+Remember to use a good vae when generating, or images wil look desaturated. I suggest WDVae or FTMSE. 
+
+
+# ---------------------------------------------------------------------------
+
 
 ## LORAs
+
+# Mushoku Tensei Anime style LoRA
+Should work fine at around weight 1 on AAM and AnyLoRA ckpt. Use mushoku tensei style to increase fidelity, use anime coloring to force flatter colors (not needed on AAM). First 10 examples are generated using my new anime style model (AAM) as base.
+
+Remember this is a style LoRA. To make characters accurately you need other networks too (but it can get pretty close with accurate descriptions).
+
+# ---------------------------------------------------------------------------
 
 # Deep throat
 LoRA trained to generate deepthroat from pov with and without hands on the head. It was not trained in any other position.

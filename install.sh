@@ -127,8 +127,11 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://dl.fbaipublicfiles
 # 动画画风 Use at weight 1 on AnyLoRA
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/60568?type=Model&format=SafeTensor -d ./stable-diffusion-webui/models/Lora -o animemix_v3_offset.safetensors
 
-#无职转生风格化
+# 无职转生风格化
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/67458?type=Model -d ./stable-diffusion-webui/models/Lora -o mushoku_tense_style_offset.safetensors
+
+# 粉毛败犬
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/100698?type=Model -d ./stable-diffusion-webui/models/Lora -o sakura_miku.safetensors
 
 # ---------------------------------- HENTAI LORAs!!!! ---------------------------------- #
 
@@ -148,9 +151,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/118273?type=Model -d ./stable-diffusion-webui/models/Lora -o bukkake_v0.4.safetensors
 
 # Spread pussy https://civitai.com/models/11363/spread-pussy
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/25584?type=Model  -d ./stable-diffusion-webui/models/Lora -o cervix.safetensors
-
-
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/25584?type=Model -d ./stable-diffusion-webui/models/Lora -o cervix.safetensors
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py

@@ -126,6 +126,8 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 
 # ---------------------------------------------- 分割线 ---------------------------------------------- #
 
+# ---------------------------------- 工具 ---------------------------------- #
+
 # LORAs
 # 线稿
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Sasulee/animeLineartMangaLike_v30MangaLike/resolve/main/animeLineartMangaLike_v30MangaLike.safetensors -d ./stable-diffusion-webui/models/Lora -o animeLineartMangaLike_v30MangaLike.safetensors
@@ -133,11 +135,28 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 # 动画画风 Use at weight 1 on AnyLoRA
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/60568?type=Model&format=SafeTensor -d ./stable-diffusion-webui/models/Lora -o animemix_v3_offset.safetensors
 
-# 无职转生风格化
+# Detail Tweaker LoRA （细节调整） https://civitai.com/models/58390?modelVersionId=62833
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/62833?type=Model -d ./stable-diffusion-webui/models/Lora -o detail_tweaker.safetensors
+
+# Classic Anime Expressions https://civitai.com/models/25613/classic-anime-expressions
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/30666?type=Model -d ./stable-diffusion-webui/models/Lora -o anime_expression.safetensors
+
+# Thicker Lines Anime Style LoRA Mix（粗沟边动画风格） https://civitai.com/models/13910/thicker-lines-anime-style-lora-mix
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/16368?type=Model -d ./stable-diffusion-webui/models/Lora -o thinker_line_anim.safetensors
+
+# ---------------------------------- 角色 ---------------------------------- #
+
+# 无职转生风格化和角色包 https://civitai.com/models/62950?modelVersionId=67458
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/67458?type=Model -d ./stable-diffusion-webui/models/Lora -o mushoku_tense_style_offset.safetensors
 
-# 粉毛败犬
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/100698?type=Model -d ./stable-diffusion-webui/models/Lora -o sakura_miku.safetensors
+# 粉毛败犬 https://civitai.com/models/86941/sakura-miku-cherry-blossom-hatsune-miku-character
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/92495?type=Model -d ./stable-diffusion-webui/models/Lora -o sakura_miku.safetensors
+
+# 食戟之灵角色包 https://civitai.com/models/24814/food-wars-girlpack-36-lora
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/183562?type=Model -d ./stable-diffusion-webui/models/Lora -o food_war_chars.safetensors
+
+# SAO 刀剑神域角色包 https://civitai.com/models/23707/sword-art-online-girlpack-lora-40
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/207942?type=Model -d ./stable-diffusion-webui/models/Lora -o sao_chars.safetensors
 
 # ---------------------------------- HENTAI LORAs!!!! ---------------------------------- #
 

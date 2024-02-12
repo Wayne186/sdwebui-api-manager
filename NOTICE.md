@@ -55,15 +55,90 @@ I use a Eta noise seed delta of 31337 or 0, with a clip skip of 2 for the exampl
 
 ref: https://civitai.com/models/2583?modelVersionId=106922
 
+
 # ---------------------------------------------------------------------------
 
 
 ## LORAs
 
-# Mushoku Tensei Anime style LoRA
+# Detail Tweaker LoRA （细节调整）
+This is a LoRA for enhancing/diminishing detail while keeping the overall style/character; it works well with all kinds of base models (incl anime & realistic models)/style LoRA/character LoRA, etc.
+
+Apply your own weight; this LoRA can be utilized for any weight up/down to 2/-2!
+
+Note: use a negative weight to reduce details!
+
+# Classic Anime Expressions https://civitai.com/models/25613/classic-anime-expressions
+Backgrounds are a bit finicky. Sometimes, it zooms out very far for no reason when you prompt for a background, especially on lower resolutions.
+
+These are the expressions (and also the trigger words):
+
+>_<
+
+@_@
+
+# Thicker Lines Anime Style LoRA Mix（粗沟边动画风格） https://civitai.com/models/13910/thicker-lines-anime-style-lora-mix
+本LoRA模型是为解决多数动漫风格模型过于柔和导致描线较弱的问题而训练的。基于风格化的图片训练，并与我此前训练的多个LoRA模型进行了融合而成。
+
+示例图片为Anything V4.5 + orange mix VAE生成，但本LoRA并不限定基础模型的种类（包括NSFW类），并可兼容多数人物LoRA。
+
+推荐强度为1.0。
+
+附带的Checkpoint版本是和Anything V4.5融合的版本，用于一些更复杂的场景（如使用其他的画风LoRA）
+
+# ---------------------------------------------------------------------------
+
+# 无职转生风格化和角色包 https://civitai.com/models/62950?modelVersionId=67458
 Should work fine at around weight 1 on AAM and AnyLoRA ckpt. Use mushoku tensei style to increase fidelity, use anime coloring to force flatter colors (not needed on AAM). First 10 examples are generated using my new anime style model (AAM) as base.
 
 Remember this is a style LoRA. To make characters accurately you need other networks too (but it can get pretty close with accurate descriptions).
+
+# 粉毛败犬 https://civitai.com/models/86941/sakura-miku-cherry-blossom-hatsune-miku-character
+Weight: 0.9
+Triggerwords: sakuramikuv1
+
+Notes:
+
+The hair ornament sometimes gets scuffed. Try manually adding cherry hair ornament manually.
+
+The hair still turns blue/turquoise at times, so either negativeprompt aqua hair or just prompt for pink hair.
+
+# 食戟之灵角色包 https://civitai.com/models/24814/food-wars-girlpack-36-lora
+角色列表常见 civitai link 
+
+Txt2Img and Upscale settings:
+
+DPM++ SDE Karras - 0.2: EULA A
+
+Steps: 20
+
+480x720
+
+CFG: 7
+
+LoRA Strengh: 0.6 - 0.2: 0.4-0.6
+
+Upscale: 2x
+
+Denoise: 0.6
+
+Upscaler: Latent
+
+# SAO 刀剑神域角色包 https://civitai.com/models/23707/sword-art-online-girlpack-lora-40
+角色列表常见 civitai link 
+
+Infos
+Clip Skip: 1 - 2 wont work!
+
+Trigger: See "Girl List" below
+
+Train Image Size: 768x768
+
+Samples in Gallery Below - Because 20 Image Limit :/
+
+SD Version: 1.5
+
+Clip-Skip: 1 - so no NAI!
 
 # ---------------------------------------------------------------------------
 

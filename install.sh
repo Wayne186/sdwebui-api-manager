@@ -101,11 +101,16 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Lyk
 # 中性动画模型
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Lykon/AnyLoRA/resolve/main/AnyLoRA_bakedVae_fp16_NOTpruned.safetensors -d ./stable-diffusion-webui/models/Stable-diffusion -o AnyLoRA_bakedVae_fp16_NOTpruned.safetensors
 
+# Hassaku - Checkpoint https://civitai.com/models/2583?modelVersionId=106922
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/106922?type=Model -d ./stable-diffusion-webui/models/Stable-diffusion -o Hassaku.safetensors
+
+# PornMaster - Checkpoint https://civitai.com/models/83930/pornmaster-anime 备用
+
 # KohakuXL -Checkpoint https://civitai.com/models/162577/kohaku-xl-beta
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/192804?type=Model -d ./stable-diffusion-webui/models/Stable-diffusion -o KohakuXL_Beta7.safetensors
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/192804?type=Model -d ./stable-diffusion-webui/models/Stable-diffusion -o KohakuXL_Beta7.safetensors
 
 # AAMXL - Checkpoint https://civitai.com/models/269232 
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M  https://civitai.com/api/download/models/303526?type=Model -d ./stable-diffusion-webui/models/Stable-diffusion -o AAMXL.safetensors
+# aria2c --console-log-level=error -c -x 16 -s 16 -k 1M  https://civitai.com/api/download/models/303526?type=Model -d ./stable-diffusion-webui/models/Stable-diffusion -o AAMXL.safetensors
 
 # sd-webui embeding models
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/Nerfgun3/bad_prompt/resolve/main/bad_prompt_version2.pt -d ./stable-diffusion-webui/embeddings -o bad_prompt_version2.pt

@@ -186,3 +186,20 @@ Use any cum-related tags to trigger the effect. Recommended tags to use: cum, bu
 # Spread pussy
 v1.1 Added image clitoris while standing
 To spread more pussy just use tag : cervix
+
+# Uncensored concept (female) https://civitai.com/models/216652/uncensored-concept-female?modelVersionId=244161
+Main trigger:
+
+pussy (for pussy with hood, not major focus), spread pussy (lightly opened up pussy, hands may be involved, the les most likely will spread as well), cervix (open up more than spread pussy, so you can see the interior, and the the cute cervix), cleft of venus (I didn't focus on this tag, mostly just give you no hood pussy, most nsfw models can already do that with no problem, it's a curved line representing pussy). If your base model understands these some other way, use underscore instead of space between words. Using them together may have unexpected result.
+
+Roll the dice trigger:
+
+uncensored
+
+Focus trigger:
+
+close-up (it will only work with spread pussy and cervix)
+
+Other:
+
+You can also get creative and use words like uretha, clitoris, anus, and etc.. They're all capped in the caption files, whichever helps you to get the perfect thing you want.

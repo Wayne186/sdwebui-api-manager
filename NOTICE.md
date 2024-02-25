@@ -41,6 +41,8 @@ Don't use face restore and underscores _, type red eyes and not red_eyes.
 
 Don't go to really high resolutions. Every model, like hassaku, get lost in the vastness of big images and has a much higher chance to greate, as example, a second anus.
 
+ref: https://civitai.com/models/2583?modelVersionId=106922
+
 _____________________________________________________
 
 Loras:
@@ -68,7 +70,7 @@ Apply your own weight; this LoRA can be utilized for any weight up/down to 2/-2!
 
 Note: use a negative weight to reduce details!
 
-# Classic Anime Expressions https://civitai.com/models/25613/classic-anime-expressions
+# Classic Anime Expressions
 Backgrounds are a bit finicky. Sometimes, it zooms out very far for no reason when you prompt for a background, especially on lower resolutions.
 
 These are the expressions (and also the trigger words):
@@ -77,7 +79,9 @@ These are the expressions (and also the trigger words):
 
 @_@
 
-# Thicker Lines Anime Style LoRA Mix（粗沟边动画风格） https://civitai.com/models/13910/thicker-lines-anime-style-lora-mix
+ref: https://civitai.com/models/25613/classic-anime-expressions
+
+# Thicker Lines Anime Style LoRA Mix（粗沟边动画风格）
 本LoRA模型是为解决多数动漫风格模型过于柔和导致描线较弱的问题而训练的。基于风格化的图片训练，并与我此前训练的多个LoRA模型进行了融合而成。
 
 示例图片为Anything V4.5 + orange mix VAE生成，但本LoRA并不限定基础模型的种类（包括NSFW类），并可兼容多数人物LoRA。
@@ -86,14 +90,18 @@ These are the expressions (and also the trigger words):
 
 附带的Checkpoint版本是和Anything V4.5融合的版本，用于一些更复杂的场景（如使用其他的画风LoRA）
 
+ref: https://civitai.com/models/13910/thicker-lines-anime-style-lora-mix
+
 # ---------------------------------------------------------------------------
 
-# 无职转生风格化和角色包 https://civitai.com/models/62950?modelVersionId=67458
+# 无职转生风格化和角色包
 Should work fine at around weight 1 on AAM and AnyLoRA ckpt. Use mushoku tensei style to increase fidelity, use anime coloring to force flatter colors (not needed on AAM). First 10 examples are generated using my new anime style model (AAM) as base.
 
 Remember this is a style LoRA. To make characters accurately you need other networks too (but it can get pretty close with accurate descriptions).
 
-# 粉毛败犬 https://civitai.com/models/86941/sakura-miku-cherry-blossom-hatsune-miku-character
+ref: https://civitai.com/models/62950?modelVersionId=67458
+
+# 粉毛败犬 
 Weight: 0.9
 Triggerwords: sakuramikuv1
 
@@ -103,7 +111,9 @@ The hair ornament sometimes gets scuffed. Try manually adding cherry hair orname
 
 The hair still turns blue/turquoise at times, so either negativeprompt aqua hair or just prompt for pink hair.
 
-# 食戟之灵角色包 https://civitai.com/models/24814/food-wars-girlpack-36-lora
+ref: https://civitai.com/models/86941/sakura-miku-cherry-blossom-hatsune-miku-character
+
+# 食戟之灵角色包
 角色列表常见 civitai link 
 
 Txt2Img and Upscale settings:
@@ -124,7 +134,9 @@ Denoise: 0.6
 
 Upscaler: Latent
 
-# SAO 刀剑神域角色包 https://civitai.com/models/23707/sword-art-online-girlpack-lora-40
+ref: https://civitai.com/models/24814/food-wars-girlpack-36-lora
+
+# SAO 刀剑神域角色包
 角色列表常见 civitai link 
 
 Infos
@@ -139,6 +151,8 @@ Samples in Gallery Below - Because 20 Image Limit :/
 SD Version: 1.5
 
 Clip-Skip: 1 - so no NAI!
+
+ref: https://civitai.com/models/23707/sword-art-online-girlpack-lora-40
 
 # ---------------------------------------------------------------------------
 

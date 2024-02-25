@@ -126,9 +126,10 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 
 # ---------------------------------------------- 分割线 ---------------------------------------------- #
 
+# LORAs
+
 # ---------------------------------- 工具 ---------------------------------- #
 
-# LORAs
 # 线稿
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Sasulee/animeLineartMangaLike_v30MangaLike/resolve/main/animeLineartMangaLike_v30MangaLike.safetensors -d ./stable-diffusion-webui/models/Lora -o animeLineartMangaLike_v30MangaLike.safetensors
 
@@ -177,6 +178,9 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 
 # Spread pussy https://civitai.com/models/11363/spread-pussy
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/25584?type=Model -d ./stable-diffusion-webui/models/Lora -o cervix.safetensors
+
+# Uncensored concept (female) https://civitai.com/models/216652/uncensored-concept-female?modelVersionId=244161
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/244161?type=Model -d ./stable-diffusion-webui/models/Lora -o cervix.safetensors
 
 sed -i -e '/    api = create_api/a\' -e '    modules.script_callbacks.before_ui_callback()' ./stable-diffusion-webui/webui.py
 sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' ./stable-diffusion-webui/modules/shared.py
